@@ -6,7 +6,7 @@
 
 <div class="container">
 
-<c:if test="${ not empty editStudentExist}">
+<c:if test="${not empty editStudentExist}">
 <c:choose>
     <c:when test="${editStudent}">
         <div class="alert alert-success" role="alert">
@@ -28,13 +28,12 @@
             <div class="form-group">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control"  name="firstName" id="firstName"
-
-                 value="${StudentProfileData.getFirstName()}" >
+                value="${StudentProfileData.getFirstName()}" />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name</label>
                 <input type="text" class="form-control" id="lastName" name="lastName"
-                 value="${StudentProfileData.getLastName()}" >
+                 value="${StudentProfileData.getLastName()}" />
               </div>
               <div class="form-group">
                 <label for="email">Email</label>

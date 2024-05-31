@@ -16,6 +16,8 @@ public interface coursedao {
     List<Student> getStudentRegistertionCourse(String id) throws SQLException;
     List<Instructor> getInstructorsTeachCourse(String id) throws SQLException;
 
+    boolean update(Course course) throws SQLException;
+
 
 
 

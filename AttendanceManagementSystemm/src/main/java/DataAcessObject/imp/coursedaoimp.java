@@ -91,5 +91,17 @@ public class coursedaoimp implements coursedao {
         return Instructors;
     }
 
+    @Override
+    public boolean update(Course course) throws SQLException {
+        Connection connection= DataBaseConnection.openConnection();
+        String sql ="update course set name_c= ? ,year_c =? where id_Course=?;";
+        PreparedStatement preparedStatement=connection.prepareStatement(sql);
+        preparedStatement.setString(1,course.getName());
+        preparedStatement.setString(2,course.getYear());
+        preparedStatement.setString(3,course.getId());
+        int row =preparedStatement.executeUpdate();
+        return row>0;
+    }
+
 
 }

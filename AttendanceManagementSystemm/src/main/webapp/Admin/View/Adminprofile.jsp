@@ -38,8 +38,7 @@
 
                     <ul class="sub-menu collapse show" id="Ins-Components">
                         <li><button type="submit" name="formPost" value="Instructor:Members" style="all:unset;"> <span class="ms-link" >Members</span></button></li>
-                        <li><button type="submit" name="formPost" style="all:unset;" value="Instructor:Member_profile"> <span class="ms-link" >Member Profile</span></button></li>
-                    </ul>
+                     </ul>
                 </li>
                 <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#stud-Components" href="#"><i
@@ -47,8 +46,7 @@
                     <!-- Menu: Sub menu ul -->
                     <ul class="sub-menu collapse show" id="stud-Components">
                         <li><button type="submit" name="formPost" value="Student:Members" style="all:unset;"> <span class="ms-link">Members</span></button></li>
-                        <li><button type="submit" name="formPost" value="Student:Member_profile" style="all:unset;"> <span class="ms-link" >Member Profile</span></button></li>
-                    </ul>
+                     </ul>
                 </li>
 
                 <li class="collapsed">
@@ -57,7 +55,6 @@
                     <!-- Menu: Sub menu ul -->
                     <ul class="sub-menu collapse show" id="course-Components">
                         <li> <button  name="formPost" value="Courses:Info" style="all:unset;"><span class="ms-link" >Courses Info</span></button></li>
-                        <li> <button  name="formPost" value="Course:Registrations" style="all:unset;"><span class="ms-link"  >Course Info</span></button></li>
                         <li> <a href="/AttendanceManagementSystemm/attendance"><span class="ms-link"  >Attendance Students </span></a></li>
                     </ul>
                 </li>

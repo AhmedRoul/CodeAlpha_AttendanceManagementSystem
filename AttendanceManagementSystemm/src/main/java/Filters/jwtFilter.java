@@ -85,13 +85,6 @@
                 if (user != null) {
                     if (jwtUtil.validateToken(stringToken, user)) {
 
-                        if (req.getRequestURI().equals("/AttendanceManagementSystemm/")) {
-                            switch (user.getRole()){
-                                case instructor ->  res.sendRedirect(req.getRequestURI()+"/Instructor");
-                                case Admin -> res.sendRedirect(req.getRequestURI()+"/Admin");
-                                case Student -> res.sendRedirect(req.getRequestURI()+"/Student");
-                            }
-                        }
                        filterChain.doFilter(req, res);
 
                     } else {

@@ -32,9 +32,7 @@ public class Admin  extends HttpServlet {
             resp.sendRedirect("/logout");
         }
         else {
-            if (user.getRole().equals(Role.Admin)) {
-                resp.sendRedirect("/Admin");
-            } else if (user.getRole().equals(Role.Student)) {
+            if (user.getRole().equals(Role.Student)) {
                 resp.sendRedirect("/Student");
             }
             else if (user.getRole().equals(Role.instructor)) {
@@ -168,9 +166,12 @@ public class Admin  extends HttpServlet {
             String [] str= Value.split("/", 2);
             id= Integer.parseInt(str[0]);
             editStudent(req,id);
+            req.setAttribute("editStudentExist",true);
+
         }
         else
             id= Integer.parseInt(Value);
+
 
         req.setAttribute("StudentProfile",true);
 
@@ -199,7 +200,7 @@ public class Admin  extends HttpServlet {
             logger.info(e.getMessage());
             req.setAttribute("editStudent",false);
         }
-        req.setAttribute("editStudentExist",true);
+
     }
     private  void CoursesInfo(HttpServletRequest req, HttpServletResponse resp){
 
@@ -241,11 +242,12 @@ public class Admin  extends HttpServlet {
 
         course.setName(req.getParameter("NameCourse"));
         course.setYear(req.getParameter("Year"));
+        course.setId(id);
 
 
-        Studentdao studentdao=new Studentdaoimp();
+        coursedao  coursedao1=new coursedaoimp();
         try {
-           // studentdao.update(course);
+            coursedao1.update(course);
             req.setAttribute("editCourse",true);
         }
         catch (Exception e){
@@ -254,5 +256,9 @@ public class Admin  extends HttpServlet {
         }
         req.setAttribute("editCourseExist",true);
     }
+
+
+
+
 
 }

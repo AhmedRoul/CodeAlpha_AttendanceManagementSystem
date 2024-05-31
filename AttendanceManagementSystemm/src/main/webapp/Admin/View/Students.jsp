@@ -24,7 +24,7 @@
             <tr scope="row">
 
               <td>
-              <button type="submit" name="formPost" value="Student:Member_profile/${studentEle.getId()}/editStudent" style="all:unset;">
+              <button type="submit" name="formPost" value="Student:Member_profile/${studentEle.getId()}" style="all:unset;">
               ${studentEle.getId()}
               </button>
               </td>
